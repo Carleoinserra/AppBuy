@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form</title>
+</head>
+<body>
+<form action="/submit" method="POST">
+<label>Inserisci il nome del nuovo prodotto: <input required type="text" name = nome></label>
+<br>
+<br>
+<label>Inserisci la marca: <input required type="text" name = marca></label>
+<br>
+<br>
+<label>Inserisci il prezzo: <input required type="text" name = prezzo></label>
+<br>
+<br>
+<label>Inserisci immagine: <input required type="text" name = immagine></label>
+<br>
+<br>
+<input type="submit">
+</form>
+<hr>
+<form action="/elenco" method="POST">
+<input type="submit" value="Elenco prodotti">
+</form>
+<form action="/elencocard" method="POST">
+<input type="submit" value="Elenco prodotti card">
+</form>
+</body>
+</html>

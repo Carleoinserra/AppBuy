@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Elenco</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+
+<style>
+img {
+width: 5%;
+}
+tr,
+td,
+th
+{
+text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="container">
+ <form action = "/buy" method = "post">
+      <table>
+        <thead>
+          <tr>
+              <th>Nome prodotto</th>
+              <th>Marca</th>
+              <th>Prezzo</th>
+              <th>Immagine</th>
+              <th>Seleziona</th>
+          </tr>
+        </thead>
+
+<tbody>
+  
+  <tr th:each="prodotto : ${listaP}">
+    <td th:text="${prodotto.nome}"></td>
+    <td th:text="${prodotto.marca}"></td>
+    <td>€<span th:text="${prodotto.prezzo}"></span></td>
+    <td><img th:src="${prodotto.url}" /></td>
+    <td><input type = "number" name = "selected" value = "0"> </td>
+  </tr>
+  
+  
+</tbody>
+      </table>
+      <input type = "submit"  value = "Compra">
+      </form>
+      <a href="/"><- Torna ad aggiungere prodotti</a>
+      </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Submit</title>
+</head>
+<body>
+<h1><span th:text="${nome}"></span> aggiunto con successo</h1>
+<hr>
+<form action="/elenco" method="POST">
+<input type="submit" value="Elenco prodotti">
+</form>
+<form action="/elencocard" method="POST">
+<input type="submit" value="Elenco prodotti card">
+</form>
+</body>
+</html>

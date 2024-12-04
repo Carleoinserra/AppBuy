@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Elenco</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+
+<style>
+.card {
+  max-width: 300px;
+  margin: auto;
+
+.card-image img {
+  width: 100%;
+  height: auto;
+}
+</style>
+</head>
+<body>
+  <div class="row" th:each="prodotto:${listaP}">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img th:src="${prodotto.url}">
+        </div>
+        <div class="card-content">
+          <p><strong>Marca:</strong> <span th:text="${prodotto.marca}"> </span> <strong>Prezzo:</strong> €<span th:text="${prodotto.prezzo}"></span></p>
+            <span class="card-title" th:text="${prodotto.nome}" style="color: black;"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+      <a href="/"><- Torna ad aggiungere prodotti</a>
+      </div>
+</body>
+</html>
